@@ -36,6 +36,7 @@ class Television:
                 self.__muted: bool = False
             elif not self.__muted:
                 self.__muted: bool = True
+            self.__volume: int = 0
         return self.__muted
 
     '''
