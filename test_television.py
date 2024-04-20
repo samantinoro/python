@@ -79,7 +79,7 @@ def test_volume_up():
     # off, volume increased
     assert str(tv) == f'Power = False, Channel = {Television.MIN_CHANNEL}, Volume = {Television.MIN_VOLUME}'
 
-    #on, volume increased
+    # on, volume increased
     tv.power()
     tv.volume_up()
     assert str(tv) == f'Power = True, Channel = {Television.MIN_CHANNEL}, Volume = {Television.MIN_VOLUME + 1}'
@@ -89,14 +89,11 @@ def test_volume_up():
     tv.volume_up()
     assert str(tv) == f'Power = True, Channel = {Television.MIN_CHANNEL}, Volume = {Television.MIN_VOLUME + 2}'
 
-
     # on, volume incrased past maximum
     while str(tv) != f'Power = True, Channel = {Television.MIN_CHANNEL}, Volume = {Television.MAX_VOLUME}':
         tv.volume_up()
     tv.volume_up()
     assert str(tv) == f'Power = True, Channel = {Television.MIN_CHANNEL}, Volume = {Television.MAX_VOLUME}'
-
-
 
 
 def test_volume_down():
