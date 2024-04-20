@@ -74,6 +74,7 @@ class Television:
         if self.__status:
             if self.__muted:
                 self.__muted = False
+                self.__volume += 1
 
             if self.__volume != self.MAX_VOLUME:
                 self.__volume += 1
@@ -88,11 +89,10 @@ class Television:
         if self.__status:
             if self.__muted:
                 self.__muted = False
+                self.__volume = 2
 
             if self.__volume != self.MIN_VOLUME:
                 self.__volume -= 1
-            else:
-                self.__volume = 1
         return self.__volume
 
     '''
