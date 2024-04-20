@@ -91,6 +91,8 @@ class Television:
 
             if self.__volume != self.MIN_VOLUME:
                 self.__volume -= 1
+            else:
+                self.__volume = 1
         return self.__volume
 
     '''
