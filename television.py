@@ -58,7 +58,6 @@ class Television:
     '''
     def channel_down(self):
         if self.__status:
-
             if self.__channel == self.MIN_CHANNEL:
                 self.__channel = self.MAX_CHANNEL
             else:
@@ -72,6 +71,9 @@ class Television:
     '''
     def volume_up(self):
         if self.__status:
+            if self.__muted:
+                self.__muted = False
+
             if self.__volume != self.MAX_VOLUME:
                 self.__volume += 1
         return self.__volume
@@ -83,6 +85,9 @@ class Television:
     '''
     def volume_down(self):
         if self.__status:
+            if self.__muted:
+                self.__muted = False
+
             if self.__volume != self.MIN_VOLUME:
                 self.__volume -= 1
         return self.__volume
