@@ -87,4 +87,4 @@ class Television:
     :return: returns a formatted string showing the status of the variables
     '''
     def __str__(self):
-        return f'Power = [{self.__status}], Channel =[{self.__channel}], Volume = [{self.__volume}]'
+        return f'Power = [{self.__status}], Channel = [{self.__channel}], Volume = [{self.__volume}]'
